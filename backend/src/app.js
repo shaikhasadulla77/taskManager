@@ -16,5 +16,8 @@ app.use(express.json());
 // Route mounting point 
 app.use('/api/tasks', taskRoutes); // Un-commented endpoint bridge
 
-const PORT = process.env.PORT || 8082;
-app.listen(PORT, () => console.log(`Server listening reliably on Port ${PORT}`));
+const PORT = process.env.PORT || 10000; // Render hamesha PORT variable bhejta hai
+
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`Server running successfully on port ${PORT}`);
+});
